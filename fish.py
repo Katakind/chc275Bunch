@@ -1,5 +1,0 @@
-Sol = input("enter a number     ")
-Sin = input("enter another number   ")
-if Sol > Sin: print("Number 1 wins!!!")
-if Sin > Sol: print("Number 2 wins!!!")
-if Sol == Sin: print("They're the same genius")
