@@ -33,3 +33,4 @@ else:
 #isnumeric() returns True if the strings its called on is a number
 #/n prints a new line, considered an escape sequence...stands for new line
 #.splitlines makes a list out of the lines you want. useful
+
