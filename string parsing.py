@@ -5,3 +5,8 @@ b = 0
 for char in sdr:
     if char == "a":
         a = a + 1
+    if char == "b":
+        b = b + 1
+print(a)
+print(b)
+ 
