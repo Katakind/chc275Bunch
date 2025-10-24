@@ -2,4 +2,6 @@ sdr = "abbabababbabababababbababababababaaaaababbbbbbababababaababababababababba
 a = 0
 b = 0
 
-for  
+for char in sdr:
+    if char == "a":
+        a = a + 1
