@@ -32,11 +32,11 @@ print("example idek")
 names = []
 check = False
 while check == False:
-    names = input("Enter the name you want to add to the list or quit: ")
-    if names == "quit":
+    name = input("Enter the name you want to add to the list or quit: ")
+    if name == "quit":
         check = True
     else:
-        names.append(names) 
+        names.append(name) 
 print(names) 
 
 """
