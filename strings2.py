@@ -19,7 +19,7 @@ print(newmsg)
 #know .lower() .uppper() .strip() .isnumeric() .split() .splitlines() .join()
 
 string = "Buenos "
-string2 = "Dias"
+string2 = "Dias "
 joined = string + string2
 print(joined)
 #DONT
