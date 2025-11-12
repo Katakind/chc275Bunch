@@ -48,4 +48,3 @@ lastdays.close()
 Nvidia2 = Nvidia2.split(",")
 Nvidia2.pop(0)
 print(Nvidia2)
-
