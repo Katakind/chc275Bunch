@@ -1,31 +1,51 @@
 firstdays = open("stocksdays", "r")
-buffer1 = firstdays.readlines() [0]
+Microsoft = firstdays.readlines() [0]
 firstdays.close()
-print(buffer1)
+
+print("first 20")
+
+Microsoft = Microsoft.split(",")
+Microsoft.pop(0)
+print(Microsoft)
 
 firstdays = open("stocksdays", "r")
-buffer1 = firstdays.readlines() [1]
+Amazon = firstdays.readlines() [1]
 firstdays.close()
-print(buffer1)
+
+Amazon = Amazon.split(",")
+Amazon.pop(0)
+print(Amazon)
 
 firstdays = open("stocksdays", "r")
-buffer1 = firstdays.readlines() [2]
+Nvidia = firstdays.readlines() [2]
 firstdays.close()
-print(buffer1)
+
+Nvidia = Nvidia.split(",")
+Nvidia.pop(0)
+print(Nvidia)
 
 lastdays = open("stocksdays2", "r") 
-buffer2 = lastdays.readlines() [0]
+Microsoft2 = lastdays.readlines() [0]
 lastdays.close()
-print(buffer2)
+
+print("final20")
+
+Microsoft2 = Microsoft2.split(",")
+Microsoft2.pop(0)
+print(Microsoft2)
 
 lastdays = open("stocksdays2", "r") 
-buffer2 = lastdays.readlines() [1]
+Amazon2 = lastdays.readlines() [1]
 lastdays.close()
-print(buffer2)
 
+Amazon2 = Amazon2.split(",")
+Amazon2.pop(0)
+print(Amazon2)
 lastdays = open("stocksdays2", "r") 
-buffer2 = lastdays.readlines() [2]
+Nvidia2 = lastdays.readlines() [2]
 lastdays.close()
-print(buffer2)
 
-mean = sum/len 
+Nvidia2 = Nvidia2.split(",")
+Nvidia2.pop(0)
+print(Nvidia2)
+
