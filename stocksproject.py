@@ -48,3 +48,7 @@ lastdays.close()
 Nvidia2 = Nvidia2.split(",")
 Nvidia2.pop(0)
 print(Nvidia2)
+
+for i in Microsoft:
+    avg = sum(Microsoft)/len(Microsoft2)
+print(avg)
