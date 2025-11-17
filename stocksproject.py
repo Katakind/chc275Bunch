@@ -49,6 +49,53 @@ Nvidia2 = Nvidia2.split(",")
 Nvidia2.pop(0)
 print(Nvidia2)
 
-for i in Microsoft:
-    avg = sum(Microsoft)/len(Microsoft2)
-print(avg)
+
+for i in range(len(Microsoft)):
+    Microsoft[i] = int(Microsoft[i])
+    Amazon[i] = int(Amazon[i])
+    Nvidia[i] = int(Nvidia[i])
+    Microsoft2[i] = int(Microsoft2[i])
+    Amazon2[i] = int(Amazon2[i])
+    Nvidia2[i] = int(Nvidia2[i])
+N1 = sum(Nvidia)/ len(Nvidia)
+M1 = sum(Microsoft)/ len(Microsoft)
+A1 = sum(Amazon)/ len(Amazon)
+N2 = sum(Nvidia2)/ len(Nvidia2)
+M2 = sum(Microsoft2)/ len(Microsoft2)
+A2 = sum(Amazon2)/ len(Amazon2)
+print(M1)
+print(A1)
+print(N1)
+print(M2)
+print(A2)
+print(N2)
+
+Buys = []
+if Microsoft > Microsoft2:
+    print("First 20 is a better buy for Microsoft")
+elif Microsoft2 > Microsoft:
+    print("last 20 is a better buy for Microsoft")
+if Amazon > Amazon2:
+    print("First 20 is a better bu for Amazon")
+elif Amazon2 > Amazon:
+    print("last 20 is a better buy for Amazon")
+if Nvidia > Nvidia2:
+    print("First 20 is a better bu for Amazon")
+elif Nvidia2 > Nvidia:
+    print("last 20 is a better buy for Amazon")
+    
+if M2 > M1:
+    Buys.append("Microsoft" )
+if A2 > A1:
+    Buys.append("Amazon")
+if N2 > N1:
+    Buys.append("Nvidia")
+    
+buffer = []
+line0 = f"Microsoft average1 {M1} average2 {M2}\n"
+line1 = f"Amazon average1 {A1} average2 {A2}\n"
+line2 = f"Nvidia average1 {N1} average2 {N2}\n"
+
+file = open("report.txt.","w")
+file.writelines(buffer)
+file.close 
