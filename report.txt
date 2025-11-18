@@ -1,0 +1,4 @@
+Microsoft average1 397.85 average2 395.6
+Amazon average1 399.45 average2 400.4
+Nvidia average1 390.75 average2 396.2
+Buys: ['Amazon', 'Nvidia']
