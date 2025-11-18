@@ -71,18 +71,7 @@ print(A2)
 print(N2)
 
 Buys = []
-if Microsoft > Microsoft2:
-    print("First 20 is a better buy for Microsoft")
-elif Microsoft2 > Microsoft:
-    print("last 20 is a better buy for Microsoft")
-if Amazon > Amazon2:
-    print("First 20 is a better bu for Amazon")
-elif Amazon2 > Amazon:
-    print("last 20 is a better buy for Amazon")
-if Nvidia > Nvidia2:
-    print("First 20 is a better bu for Amazon")
-elif Nvidia2 > Nvidia:
-    print("last 20 is a better buy for Amazon")
+
     
 if M2 > M1:
     Buys.append("Microsoft" )
@@ -95,7 +84,9 @@ buffer = []
 line0 = f"Microsoft average1 {M1} average2 {M2}\n"
 line1 = f"Amazon average1 {A1} average2 {A2}\n"
 line2 = f"Nvidia average1 {N1} average2 {N2}\n"
+line3 = f"Buys: {Buys}"
+Buffer= [line0,line1,line2,line3]
 
 file = open("report.txt.","w")
-file.writelines(buffer)
+file.writelines(Buffer)
 file.close 
