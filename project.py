@@ -25,6 +25,8 @@ screen = pygame.display.set_mode((screen_width, screen_height))
 Background_img = pygame.image.load('vnbackground.jpg').convert()
 Background_img = pygame.transform.scale(Background_img, (screen_width, screen_height))
 clock = pygame.time.Clock()
+
+
     
 Quincy = pygame.image.load('Quincy.webp').convert()
 screen.blit(Quincy,(100, 200))
@@ -38,14 +40,16 @@ COLOR = (255,255,255)
 running = True
 x = 0
 i = 0
+Textbox = pygame.image.load('Textboxofdoom.png').convert()
 
 
 #clicking function
 while running:
     text = FONT.render(f"{buffer[i]}",True,COLOR)
     screen.blit(Background_img, (0,0))
+    screen.blit(Textbox, (1000, 800))
     screen.blit(text,(100,100))
-    screen.blit(Quincy,(100, 200))
+    #screen.blit(Quincy,(100, 200))
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
