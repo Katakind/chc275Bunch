@@ -5,20 +5,11 @@ with open("script.txt","r") as f:
     for i in range(len(buffer)):
         buffer[i] = buffer[i].strip()
 
+pygame.init() 
 
-
-
-
-pygame.init()
 #display
 screen_width, screen_height = 1920, 1080
 pygame.display.set_mode((1920, 1080))
-
-pygame.display.set_caption("Pygame Visual Novel")
-WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
-TEXTBOX_COLOR = (0, 0, 0, 180)
-
 
 #loading background, 
 screen = pygame.display.set_mode((screen_width, screen_height))
@@ -43,8 +34,8 @@ Textbox = pygame.image.load('Textboxofdoom.png').convert()
 
 
 while running:
-    if currentline >= len(buffer):
-        currentline = 0
+    
+
     text = FONT.render(f"{buffer[currentline]}",True,COLOR)
    
 #blit
@@ -56,12 +47,11 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_SPACE:   
-              currentline += 1
-#fps
+            if event.key == pygame.K_SPACE:
+                currentline += 1
+#fps            
     pygame.display.flip()
     clock.tick(60)
-
 
 
 pygame.quit()        
