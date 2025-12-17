@@ -5,11 +5,27 @@ with open("script.txt","r") as f:
     for i in range(len(buffer)):
         buffer[i] = buffer[i].strip()
 
+
+
+
 pygame.init() 
 
 #display
 screen_width, screen_height = 1920, 1080
 pygame.display.set_mode((1920, 1080))
+
+#triggertimes
+####################################################image_triggers = {
+    ####################################################0: 'vnbackground.jpg',
+    ##############################################0: 'another_background.jpg',
+#################################################0: 'Luigi_2025.webp',
+    #######################################0: 'Textboxofdoom.png',
+    ##########################################0: 'Sonic.mp3',
+###########################################################}
+
+
+
+
 
 #loading background, 
 screen = pygame.display.set_mode((screen_width, screen_height))
@@ -39,15 +55,17 @@ resizedtextbox = pygame.transform.smoothscale(Textbox, (1000,300))
 while running:  
     
     text = FONT.render(f"{buffer[currentline]}",True,COLOR)
-
+    screen.blit(resizedtextbox, (475, 700))
+    screen.blit(text  ,(500,750))
    
    
 #blit
+###########################################################################################if currentline >= image_triggers:   
     screen.blit(Background_img1, (0,0))
     screen.blit(Luigi1,(500,275))
     screen.blit(resizedtextbox, (475, 700))
     screen.blit(text  ,(500,750))
-    
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -56,6 +74,8 @@ while running:
                 currentline = (currentline + 1) % len(buffer)    
                     
 #fps            
+
+
     pygame.display.flip()
     clock.tick(60)
 
