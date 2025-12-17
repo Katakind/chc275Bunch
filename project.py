@@ -18,6 +18,7 @@ Background_img1 = pygame.transform.scale(Background_img1, (screen_width, screen_
 clock = pygame.time.Clock()
 
 #loading music 
+
 Backgroundmusic1 = pygame.mixer.music.load('Sonic.mp3')
 pygame.mixer.music.play(-1)
 
@@ -45,7 +46,7 @@ while running:
     screen.blit(Background_img1, (0,0))
     screen.blit(Luigi1,(500,275))
     screen.blit(resizedtextbox, (475, 700))
-    screen.blit(text  ,(100,100))
+    screen.blit(text  ,(500,750))
     
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
