@@ -18,9 +18,11 @@ Background_img1 = pygame.transform.scale(Background_img1, (screen_width, screen_
 clock = pygame.time.Clock()
 
 
+Backgroundmusic1 = pygame.mixer.music.load('Sonic.mp3')
+pygame.mixer.music.play(-1)
 
-
-
+#loading characters
+Luigi1 = pygame.image.load('Luigi_2025.webp').convert()
 
 #font
 FONT = pygame.font.SysFont("cabin", 24)
@@ -37,16 +39,14 @@ while running:
     
     text = FONT.render(f"{buffer[currentline]}",True,COLOR)
 
-#loading music
-#if text: 
-    Backgroundmusic1 = pygame.mixer.music.load('Sonic.mp3')
-    pygame.mixer.music.play(-1)
+#loading music 
 
 
    
    
 #blit
     screen.blit(Background_img1, (0,0))
+    screen.blit(Luigi1,(500,275))
     screen.blit(resizedtextbox, (475, 700))
     screen.blit(text  ,(100,100))
     
