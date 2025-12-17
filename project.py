@@ -17,7 +17,7 @@ Background_img1 = pygame.image.load('vnbackground.jpg').convert()
 Background_img1 = pygame.transform.scale(Background_img1, (screen_width, screen_height))
 clock = pygame.time.Clock()
 
-
+#loading music 
 Backgroundmusic1 = pygame.mixer.music.load('Sonic.mp3')
 pygame.mixer.music.play(-1)
 
@@ -38,9 +38,6 @@ resizedtextbox = pygame.transform.smoothscale(Textbox, (1000,300))
 while running:  
     
     text = FONT.render(f"{buffer[currentline]}",True,COLOR)
-
-#loading music 
-
 
    
    
