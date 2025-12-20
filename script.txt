@@ -51,7 +51,7 @@ can we?
 You: Luigi do you need my help?
 Luigi: Yeah Yeah!
 I have a feeling that Luigi is holding info from me
-Should I help him. Press space to help him. Press N to decline (dont decline him thats not nice man)
+Should I help him. Press space to help him. 
 You: Yeah Luigi I can come.
 Luigi: Lets A Go!
 Luigi started walking off to the sewer at a moderately brisk pace
