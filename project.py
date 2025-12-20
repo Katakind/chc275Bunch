@@ -7,6 +7,7 @@ with open("script.txt","r") as f:
 
 #To blit images and music at certain times
 Dialougestage = 0
+#line to jump to
 
 
 pygame.init() 
@@ -16,8 +17,9 @@ screen_width, screen_height = 1920, 1080
 pygame.display.set_mode((1920, 1080))
 
 
+Sonicmusic = 'Sonic.mp3' 
 
-
+ 
 
 
 
@@ -28,11 +30,21 @@ Background_img1 = pygame.transform.scale(Background_img1, (screen_width, screen_
 Background_imag2= pygame.image.load('duy-tung-street-night.jpg').convert()
 Background_imag2 = pygame.transform.scale(Background_imag2, (screen_width, screen_height))
 clock = pygame.time.Clock()
-
-#loading music 
-
-Backgroundmusic1 = pygame.mixer.music.load('Sonic.mp3')
-pygame.mixer.music.play(-1)
+Background_imag3 = pygame.image.load('hellbackground.jpg').convert()
+Background_imag3 = pygame.transform.scale(Background_imag3, (screen_width, screen_height))
+Background_imag4 = pygame.image.load('Mario is dead.jpg').convert()
+Background_imag4 = pygame.transform.scale(Background_imag4, (screen_width, screen_height))
+Background_imag5 = pygame.image.load('Mementomori.jpeg').convert()
+Background_imag5 = pygame.transform.scale(Background_imag5, (screen_width, screen_height))
+Background_imag6 = pygame.image.load('background 6.jpg').convert()
+Background_imag6 = pygame.transform.scale(Background_imag6, (screen_width, screen_height))
+Background_imag7 = pygame.image.load('yes.jpg').convert()
+Background_imag7 = pygame.transform.scale(Background_imag7, (screen_width, screen_height))
+#playing music (this was hell to get running OH MY GOD)
+if Dialougestage <= 64:
+    if pygame.mixer.music.get_busy() == False:
+        pygame.mixer.music.load(Sonicmusic)
+        pygame.mixer.music.play(-1)    
 
 #loading characters
 Luigi1 = pygame.image.load('Luigi_2025.webp').convert()
@@ -67,24 +79,73 @@ while running:
             screen.blit(Luigi2,(500,275))
             screen.blit(resizedtextbox, (475, 700))
             screen.blit(text  ,(500,750))
-        elif Dialougestage <= 54:
+        elif Dialougestage <= 55:
             screen.blit(Background_imag2, (0,0))
             screen.blit(Luigi1,(500,275))
             screen.blit(resizedtextbox, (475, 700))
             screen.blit(text  ,(500,750))
-        elif Dialougestage <= 60:
+        elif Dialougestage <= 64:
             screen.blit(Background_imag2, (0,0))
             screen.blit(Luigi3,(500,275))
             screen.blit(resizedtextbox, (475, 700))
             screen.blit(text  ,(500,750))
+        elif Dialougestage <= 70:
+            screen.blit(Background_imag3, (0,0))
+            screen.blit(Luigi3,(500,275))
+            screen.blit(resizedtextbox, (475, 700))
+            screen.blit(text  ,(500,750))
+        elif Dialougestage <= 91:
+            screen.blit(Background_imag3, (0,0))
+            screen.blit(Luigi3,(500,275))
+            screen.blit(Mario1,(1000,275))
+            screen.blit(resizedtextbox, (475, 700))
+            screen.blit(text  ,(500,750))
+        elif Dialougestage <= 100:
+            screen.blit(Background_imag4, (0,0))
+            screen.blit(resizedtextbox, (475, 700))
+            screen.blit(text  ,(500,750))
+        elif Dialougestage <= 135:
+            screen.blit(Background_imag3, (0,0))
+            screen.blit(resizedtextbox, (475, 700))
+            screen.blit(text  ,(500,750))
+        elif Dialougestage <= 142:
+            screen.blit(Background_imag5, (0,0))
+            screen.blit(resizedtextbox, (475, 700))
+            screen.blit(text  ,(500,750))
+        elif Dialougestage <= 187:
+            screen.blit(Background_imag5, (0,0))
+            screen.blit(Mario1,(500,275))
+            screen.blit(resizedtextbox, (475, 700))
+            screen.blit(text  ,(500,750))
+        elif Dialougestage <= 216:
+            screen.blit(Background_imag3, (0,0))
+            screen.blit(Luigi3,(1000,275))
+            screen.blit(resizedtextbox, (475, 700))
+            screen.blit(text  ,(500,750))   
+        elif Dialougestage <= 225:
+            screen.blit(Background_imag6, (0,0))
+            screen.blit(text  ,(500,750))
+        elif Dialougestage <= 243:
+            screen.blit(Background_imag7, (0,0))
+            screen.blit(resizedtextbox, (475, 700))
+            screen.blit(text  ,(500,750))
+        elif Dialougestage <= 250:
+            screen.blit(Background_imag7, (0,0))
+        elif Dialougestage == 251:
+            screen.blit(Background_imag7, (0,0))
+            screen.blit(resizedtextbox, (475, 700))
+            screen.blit(text  ,(500,750))
+        elif Dialougestage == 252:
+            running = False
         if event.type == pygame.QUIT:
             running = False
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE:
+
                 currentline = (currentline + 1) % len(buffer)
                 Dialougestage += 1    
-    
-                    
+        
+
 #fps            
 
 
