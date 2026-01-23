@@ -31,3 +31,26 @@ print(mylist)
 add10(mylist)
 print(mylist)        
 
+
+"""
+data types in programming can either be mutable or immutable 
+
+- mutable - it can be changed
+- immutable - cant be changed
+
+integers are immutable and all numeric types are immutable
+
+BUT lists are mutable
+"""
+
+def add7(x):
+    x = x + 7
+    return x #this is going to flag python to remember that x got reassigned to x + 7
+
+
+def add(x, y):
+    print(x + y) #DONT DO THIS
+    
+def add(x, y):
+    return x + y #do this
+
