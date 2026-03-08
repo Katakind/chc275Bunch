@@ -35,6 +35,7 @@ sol = [
 
 for row in sol:
     for num in row:
+        num = num + 10
         print(num) #prints 1-9
         
         
