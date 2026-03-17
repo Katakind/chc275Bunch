@@ -47,3 +47,25 @@ but for a dictionary, it takes in two parameters. either get rid of it, or trigg
 mydict2.pop("Joseph","usernotfound")
 print(mydict2)
 
+"""
+Tuples:
+    -keys: have to be IMMUTABLE
+        -Restrics us to Strings and Numbers <- this might not be sufficient for some usecases
+"""
+
+accounts = () #this is how you create a dictionary
+
+"""
+Keys: Name for the account holder
+Value: balance
+
+The SCHEMA OF THIS DICTIONARY IS KEYS: ACCOUNT NAMES VALUES: BALANCES (NAME:BALANCE)
+
+two people: 
+        John Smith: -250
+        John Smith: 1000000
+"""
+accounts["John Smith"] = -250
+print(accounts)
+accounts["John Smith"] = 1000000
+print(accounts)
